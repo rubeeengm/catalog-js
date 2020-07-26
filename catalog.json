@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Guitarra eléctrica I",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 1200.00,
+        "image": "/images/guitar-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Guitarra eléctrica 2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 750.00,
+        "image": "/images/guitar-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Guitarra eléctrica 3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 680.00,
+        "image": "/images/guitar-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Guitarra eléctrica 4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 200.00,
+        "image": "/images/guitar-4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Guitarra eléctrica 5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 140.00,
+        "image": "/images/guitar-5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Guitarra eléctrica 6",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 570.00,
+        "image": "/images/guitar-6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Guitarra eléctrica 7",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 890.00,
+        "image": "/images/guitar-7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Guitarra eléctrica 8",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 750.00,
+        "image": "/images/guitar-1.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Guitarra eléctrica 9",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 650.00,
+        "image": "/images/guitar-3.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Guitarra eléctrica 10",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 252.00,
+        "image": "/images/guitar-3.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Guitarra eléctrica 11",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 365.00,
+        "image": "/images/guitar-4.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Guitarra eléctrica 12",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 452.00,
+        "image": "/images/guitar-5.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Guitarra eléctrica 13",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 785.00,
+        "image": "/images/guitar-6.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Guitarra eléctrica 14",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 680.00,
+        "image": "/images/guitar-7.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Amplificador 1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 1580.00,
+        "image": "/images/amp-1.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Amplificador 2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 4525.00,
+        "image": "/images/amp-2.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Amplificador 3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 3580.00,
+        "image": "/images/amp-3.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Amplificador 4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 1580.00,
+        "image": "/images/amp-4.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Amplificador 5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 750.00,
+        "image": "/images/amp-5.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Amplificador 6",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": 1350.00,
+        "image": "/images/amp-6.jpg"
+    }
+]
