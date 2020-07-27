@@ -1,7 +1,10 @@
 'use strict';
 
-let catalog = new KodotiCatalog({
-    url: 'catalog.json'
-});
- 
-catalog.render();
+(function(){
+    let catalog = new KodotiCatalog({
+    	url: 'catalog.json'
+    	, element : '#catalog'
+    });
+    
+    catalog.render();
+})();
