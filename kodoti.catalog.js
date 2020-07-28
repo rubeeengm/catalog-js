@@ -35,11 +35,19 @@ class KodotiCatalog {
                         </div>
                         <div class="card-content">
                             <p class="title is-size-6 is-uppercase">${item.name}</p>
-                            <p>${item.description}p>
+                            <p>${item.description}</p>
                         </div>
                         <footer class="card-footer">
                             <a class="card-footer-item shopping-cart-add">Agregar</a>
-                            <div class="card-footer-item">${item.price}</div>
+			    <div class="card-footer-item">
+				${(item.price * self._config.culture.exchangeRate).toLocaleString(
+				    self._config.culture.code
+				    , {
+				    	style: 'currency'
+					, currency: self._config.culture.currency
+				    }
+				)}
+			  </div>
                         </footer>
                      </div>
                 </div>
