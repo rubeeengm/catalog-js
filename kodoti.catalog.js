@@ -3,6 +3,7 @@ class KodotiCatalog {
 	this._data = [];
 	this._url = obj.url;
 	this._target = document.querySelector(obj.element);
+	this._config = obj.config;
     }
 
     render() {
@@ -13,7 +14,11 @@ class KodotiCatalog {
 	    let template = [];
 
 	    template.push('<div class="columns is-multiline">');
-	    items.forEach(item => template.push(_productTemplate(item)));
+
+	    items
+		.sort(self._config.sort || ((a,b) => true))
+		.forEach(item => template.push(_productTemplate(item)));
+
 	    template.push('</div>');
 
 	    self._target.innerHTML = template.join('');
