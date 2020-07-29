@@ -25,7 +25,11 @@
     
     catalog.render();
 
-    document.querySelector('#filter').addEventListener('change', function(){
+    document.querySelector('#filter').addEventListener('change', filterEvent);
+    
+    document.querySelector('#exchangeRate').addEventListener('change', exchangeRateEvent);
+    
+    function filterEvent(){
 	switch(this.options[this.selectedIndex].value) {
 	    case 'price-asc':
 		config.sort = ((a,b) => a.price - b.price);
@@ -37,9 +41,9 @@
 	}
 	
 	catalog.render();
-    });
-    
-    document.querySelector('#exchangeRate').addEventListener('change', function(){
+    }
+
+    function exchangeRateEvent(){
 	let value = this.options[this.selectedIndex].value;
 
 	switch(value) {
@@ -58,5 +62,5 @@
 	
 	catalog.render();
 	shoppingCart.render();
-    });
+    }
 })();

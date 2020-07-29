@@ -4,6 +4,8 @@ class KodotiShoppingCart {
 	this._amount = document.querySelector(obj.amount);
 	this._culture = obj.culture;
 	this._data = [];
+	this._key = 'kodoti-shopping-cart';
+
 	this.render();
     }
 
@@ -26,7 +28,19 @@ class KodotiShoppingCart {
 	);
     }
 
+    _initialize(items){
+	let value = localStorage.getItem(this._key);
+
+	if(value){
+	    let ids = JSON.parse(value);
+	    this._data = items.filter(x => ids.includes(x.id));
+	    this.render();
+	}
+    }
+
     add(item){
+	let self = this;
+
 	if(this._data.some(x => x.id === item.id)){
 	    alert("El producto ya ha sido agregado");
 	    return;
@@ -34,6 +48,15 @@ class KodotiShoppingCart {
 
 	this._data.push(item);
 	this.render();
+	updateLocalStorage();
+
+	function updateLocalStorage(){
+	    let value = JSON.stringify(
+		self._data.map(x => x.id)
+	    );
+
+	    localStorage.setItem(self._key, value);
+	}
     }
 }
 
@@ -129,7 +152,8 @@ class KodotiCatalog {
 			throw 'Ocurrió un error: ' + response.status;
 		    }).then(response => {
 			self._data = response;
-  
+			self._cart._initialize(self._data);
+
 			return self._data;
 		    }).catch(error => {
 			console.error(error);
