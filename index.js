@@ -10,10 +10,17 @@
 	}
     };
 
+    let shoppingCart = new KodotiShoppingCart({
+	total: '#total'
+	, amount: '#amount'
+	, culture: config.culture
+    });
+
     let catalog = new KodotiCatalog({
     	url: 'catalog.json'
-    	, element : '#catalog'
+    	, element: '#catalog'
 	, config
+	, cart: shoppingCart
     });
     
     catalog.render();
@@ -50,5 +57,6 @@
 	}
 	
 	catalog.render();
+	shoppingCart.render();
     });
 })();

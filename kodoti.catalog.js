@@ -1,9 +1,49 @@
+class KodotiShoppingCart {
+    constructor(obj){
+	this._total = document.querySelector(obj.total);
+	this._amount = document.querySelector(obj.amount);
+	this._culture = obj.culture;
+	this._data = [];
+	this.render();
+    }
+
+    render(){
+	this._total.innerText = this._data.length;
+	this._amount.innerText = (
+	    this._data.reduce((a,b) => {
+		if(a.price){
+		    return a.price + b.price;
+		}
+
+		return a + b.price;
+	    }, 0) * this._culture.exchangeRate
+	).toLocaleString(
+	    this._culture.code
+	    , {
+		style: 'currency'
+		, currency: this._culture.currency
+	    }
+	);
+    }
+
+    add(item){
+	if(this._data.some(x => x.id === item.id)){
+	    alert("El producto ya ha sido agregado");
+	    return;
+	}
+
+	this._data.push(item);
+	this.render();
+    }
+}
+
 class KodotiCatalog {
     constructor(obj) {
 	this._data = [];
 	this._url = obj.url;
 	this._target = document.querySelector(obj.element);
 	this._config = obj.config;
+	this._cart = obj.cart;
     }
 
     render() {
@@ -22,9 +62,33 @@ class KodotiCatalog {
 	    template.push('</div>');
 
 	    self._target.innerHTML = template.join('');
+
+	    _addCartEvents();
 	});
 
+	function _addCartEvents(){
+	    let controls = self._target.querySelectorAll('.shopping-cart-add');
+
+	    for(let index = 0; index < controls.length; index++){
+		controls[index].addEventListener('click', function(){
+		    let id = controls[index].dataset.id;
+		    self._cart.add(
+			self._data.find(x => x.id == id)
+		    );
+		});
+	    }
+	}
+
 	function _productTemplate(item) {
+	    let price = (item.price * self._config.culture.exchangeRate)
+			    .toLocaleString(
+				self._config.culture.code
+				, {
+				    style: 'currency'
+				    , currency: self._config.culture.currency
+				}
+			    );
+
 	    return `
 	    	<div class="column is-one-quarter">
                	    <div class="card">
@@ -38,17 +102,9 @@ class KodotiCatalog {
                             <p>${item.description}</p>
                         </div>
                         <footer class="card-footer">
-                            <a class="card-footer-item shopping-cart-add">Agregar</a>
-			    <div class="card-footer-item">
-				${(item.price * self._config.culture.exchangeRate).toLocaleString(
-				    self._config.culture.code
-				    , {
-				    	style: 'currency'
-					, currency: self._config.culture.currency
-				    }
-				)}
-			  </div>
-                        </footer>
+                            <a data-id="${item.id}"  class="card-footer-item shopping-cart-add">Agregar</a>
+			    <div class="card-footer-item">${price}</div>
+			</footer>
                      </div>
                 </div>
 	    `;
